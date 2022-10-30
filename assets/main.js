@@ -5,3 +5,9 @@ const NUMBER_CODES = "0123456789";
 const SYMBOL_CODES = "@#$%^&*";
 
 
+function generatePassword()
+{
+    
+}
+
+
