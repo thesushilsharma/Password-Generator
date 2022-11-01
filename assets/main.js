@@ -5,7 +5,7 @@ function password() {
     const NUMBER_CODES = '0123456789';
     const SYMBOL_CODES = '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
     const chars = UPPERCASE_CODES + LOWERCASE_CODES + NUMBER_CODES + SYMBOL_CODES;
-    const length = 6;
+    const length = 8;
     var result = generateRandomPassword(length, chars);
     document.getElementById('pwd_txt').innerHTML = result;
 }
