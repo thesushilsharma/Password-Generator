@@ -45,12 +45,15 @@ function password() {
         chars += SYMBOL_CODES;
     }
 
-    // cryptographically secure random password generator
+    // Cryptographically secure random password generator
     let password = '';
     const crypto = window.crypto || window.msCrypto; // Use Web Crypto API if available
+    
+    // Create an array to store the random values
     const array = new Uint32Array(length);
 
     if (crypto && crypto.getRandomValues) {
+        // Generate the random values
         crypto.getRandomValues(array);
     } else {
         // fallback to Math.random() if Web Crypto API is not available
