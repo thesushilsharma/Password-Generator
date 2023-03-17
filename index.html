@@ -14,15 +14,62 @@
 </head>
 
 <body>
-    <main>
-        <section>
-            <article>
-                <h1 class="text-3xl font-bold underline">Instantly generate a secure, random password with an online tool</h1>
+    <main class="bg-gray-700">
+        <section class="flex flex-col items-center justify-center h-screen">
+            <article class="text-center text-white">
+                <h1 class="text-3xl font-bold underline">Instantly generate a secure, random password with an online
+                    tool</h1>
                 <div>
-                    <input type="button" onclick="password()" value="Generate Random Password" class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
+                    <div class="mt-8">
+                        <button id="generate-password"
+                            class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-3xl">
+                            Generate Random Password
+                        </button>
+                    </div>
                     <div>
-                        Random password:
-                        <p class="leading-relaxed text-base" id="pwd_txt"></p>
+                        <label class="block mt-4">
+                            <input type="checkbox" id="include-uppercase" checked
+                                class="mr-2 leading-tight w-6 h-6 bg-green-200 accent-green-500">
+                            <span class="text-xl">
+                                Include Uppercase Letters
+                            </span>
+                        </label>
+                        <label class="block mt-4">
+                            <input type="checkbox" id="include-lowercase" checked
+                                class="mr-2 leading-tight w-6 h-6 accent-green-500">
+                            <span class="text-xl">
+                                Include Lowercase Letters
+                            </span>
+                        </label>
+                        <label class="block mt-4">
+                            <input type="checkbox" id="include-numbers" checked
+                                class="mr-2 leading-tight w-6 h-6 accent-green-500">
+                            <span class="text-xl">
+                                Include Numbers
+                            </span>
+                        </label>
+                        <label class="block mt-4">
+                            <input type="checkbox" id="include-symbols"
+                                class="mr-2 leading-tight w-6 h-6 accent-green-500 accent-green-500">
+                            <span class="text-xl">
+                                Include Symbols
+                            </span>
+                        </label>
+                        <label class="block mt-4">
+                            <input type="number" id="password-length" value="12" min="8" max="64"
+                                class="w-24 border rounded py-2 px-3 font-bold text-xl text-red-700 outline-green-500 outline-4">
+                            <span class="text-xl">
+                                Password Length
+                            </span>
+                        </label>
+                        <div id="passwordOutputContainer" class="hidden">
+                            <div
+                                class="bg-blue-500 border-0 mt-8 py-2 px-6 inline-block focus:outline-none rounded text-lg">
+                                <strong
+                                    class="leading-relaxed text-2xl underline decoration-black decoration-4 underline-offset-4"
+                                    id="passwordOutput"></>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
